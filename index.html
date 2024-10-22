@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shapes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id ="canvas"></canvas>
+    
+    <h1 class="text">Learn about shapes</h1>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2></h2>
+                <h3>2D</h3>
+                <p>shapes 
+                </p>
+                <a href="2d.html">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2></h2>
+                <h3>3D</h3>
+                <p> shapes
+                </p>
+                <a href="3d.html">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+    <script src="javascript/tree.js"></script>
+    <script src="javascript/mouse1.js"></script>
+    
+    <script type="text/javascript" src="javascript/main.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+</script>
+</body>
+</html>

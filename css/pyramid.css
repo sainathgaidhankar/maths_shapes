@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: 100%;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    background-image: linear-gradient(to top, rgba(0, 169, 217, .7) 0%, rgba(0, 169, 217, .5) 5%, rgba(0, 169, 217, .0) 70%);
+}
+
+.text{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    top: 480px;
+    left: 180px;
+    position: fixed;
+    padding-bottom: 550px;
+    color: #fff;
+    text-shadow: 3px 3px 3px rgba(41,128,185,.8);
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card{
+    position: relative;
+    width: 750px;
+    height: 650px;
+    margin: 30px;
+    left: 200px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content{
+    padding: 20px;
+    
+
+}
+
+.container .card .content h3{
+    font-size: 1.8em;
+    top: 0px;
+    color: #85eff1;
+    text-shadow: 3px 3px 3px rgba(41,128,185,.8);
+    z-index: 1;
+}
+
+.container .card .content p{
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 300;
+    
+}
+
+.container .card .content a{
+    position: relative;
+    left: 300px;
+    top: 30px;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cont1{
+    position: absolute;
+    top: 230px;
+    left: 140px;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(-20deg) rotateY(30deg);
+    transform-style: preserve-3d;
+    animation: animate 6s linear infinite;
+    
+}
+
+.pyramid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.2);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform-origin: bottom;
+    transform: rotateY(calc(90deg*var(--i))) translateZ(100px) rotateX(30deg);
+}
+
+.side:nth-child(even){
+    background-color: yellow;
+    animation: even 3s 1s infinite;
+}
+
+.side:nth-child(odd){
+    background-color: darkkhaki;
+    animation: odd 3s 1s infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotateX(-20deg) rotateY(30deg);
+    }
+    100%{
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+}
+
+@keyframes even {
+    0%, 100%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: darkkhaki;
+    }
+}
+
+@keyframes odd {
+    0%, 100%{
+        background-color: darkkhaki;
+    }
+    50%{
+        background-color: yellow;
+    }
+    
+}
